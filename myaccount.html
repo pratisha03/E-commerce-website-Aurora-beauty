@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Account</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 350px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin-top: 100px;
+    }
+
+    .tab {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab label {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background: #e4e4e4;
+      cursor: pointer;
+      border-radius: 5px 5px 0 0;
+      font-weight: bold;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .login-form,
+    .signup-form {
+      display: none;
+      flex-direction: column;
+    }
+
+    #loginTab:checked ~ .container .login-form {
+      display: flex;
+    }
+
+    #signupTab:checked ~ .container .signup-form {
+      display: flex;
+    }
+
+    #loginTab:checked ~ .container .tab label[for="loginTab"],
+    #signupTab:checked ~ .container .tab label[for="signupTab"] {
+      background: #fff;
+      border-bottom: 2px solid #fff;
+    }
+
+    .tabs input,
+    .tabs button {
+      width: 100%;
+    }
+
+    .tabs input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .tabs button {
+      padding: 10px;
+      background: rgb(227, 102, 123);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .tabs button:hover {
+      background: rgb(247, 171, 184);
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .top-bar {
+      height: 33px;
+      width: 100%;
+      background-color: #ede7e7;
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+    }
+
+    header {
+      position: sticky;
+      top: 33px;
+      z-index: 1000;
+      width: 100%;
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      padding: 10px;
+      gap: 15px;
+    }
+
+    .nav-menu a,
+    .nav-menu .dropdown > a {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu .dropdown > a:hover {
+      background-color: white;
+      color: #d63384;
+    }
+
+    .nav-menu .dropdown {
+      position: relative;
+      padding-right: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      top: 100%;
+      right: 0;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .dropdown-content ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dropdown-content li a {
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      display: block;
+      padding: 10px;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="contact-info">
+      <span>📞 8888056345 &nbsp;</span>
+      <span>📩 aurora289@gmail.com </span>
+    </div>
+  </div>
+
+  <header>
+    <div class="logo">AURORA</div>
+    <nav class="nav-menu">
+      <a href="HOME">HOME</a>
+      <a href="JWELARY">JWELARY</a>
+      <a href="new.html">WHAT'S NEW?</a>
+      <div class="dropdown">
+        <a href="TYPE">TYPE</a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="Rings.html">Rings</a></li>
+            <li><a href="Earrings.html">Earrings</a></li>
+            <li><a href="Neckpleces.html">Neckpieces</a></li>
+            <li><a href="Bracelate.html">Bangles and Bracelets</a></li>
+            <li><a href="Anklets.html">Anklets</a></li>
+            <li><a href="Hairaccessories.html">Hair Accessories</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">👤</a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Store Credit</a></li>
+            <li><a href="#">My Wish List</a></li>
+            <li><a href="#">Login/Signup</a></li>
+            <li><a href="#">My Orders</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Radio tabs -->
+  <input type="radio" name="tab" id="signupTab" checked>
+  <input type="radio" name="tab" id="loginTab">
+
+  <div class="container">
+    <div class="tab">
+      <label for="loginTab">Login</label>
+      <label for="signupTab">Sign Up</label>
+    </div>
+
+    <div class="tabs">
+
+      <!-- Login Form -->
+      <form id="loginForm" class="login-form" method="POST" action="login.php">
+        <input type="text" id="loginEmail" name="login_email" placeholder="Email or Username" required>
+        <div id="loginEmailError" class="error"></div>
+
+        <input type="password" id="loginPassword" name="login_password" placeholder="Password" required>
+        <div id="loginPasswordError" class="error"></div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="regForm" class="signup-form" method="POST" action="send_otp.php">
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+        <div id="nameError" class="error"></div>
+
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div id="emailError" class="error"></div>
+
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <div id="passwordError" class="error"></div>
+
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        <div id="confirmPasswordError" class="error"></div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Signup Form Validation
+      const regForm = document.getElementById("regForm");
+      regForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+        let nameError = document.getElementById("nameError");
+        let emailError = document.getElementById("emailError");
+        let passwordError = document.getElementById("passwordError");
+        let confirmPasswordError = document.getElementById("confirmPasswordError");
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+        passwordError.textContent = "";
+        confirmPasswordError.textContent = "";
+
+        let isValid = true;
+
+        if (name === "") {
+          nameError.textContent = "Name is required";
+          isValid = false;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === "") {
+          emailError.textContent = "Email is required";
+          isValid = false;
+        } else if (!emailPattern.test(email)) {
+          emailError.textContent = "Invalid email format";
+          isValid = false;
+        }
+
+        if (password.length < 6) {
+          passwordError.textContent = "Password must be at least 6 characters!";
+          isValid = false;
+        }
+
+        if (confirmPassword !== password) {
+          confirmPasswordError.textContent = "Passwords do not match";
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert("🎉 Signup Successful!");
+          regForm.submit();
+        }
+      });
+
+      // Login Form Validation
+      const loginForm = document.getElementById("loginForm");
+      loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let loginEmail = document.getElementById("loginEmail").value.trim();
+        let loginPassword = document.getElementById("loginPassword").value;
+
+        let loginEmailError = document.getElementById("loginEmailError");
+        let loginPasswordError = document.getElementById("loginPasswordError");
+
+        loginEmailError.textContent = "";
+        loginPasswordError.textContent = "";
+
+        let isValid = true;
+
+        if (loginEmail === "") {
+          loginEmailError.textContent = "Email or Username is required";
+          isValid = false;
+        }
+
+        if (loginPassword.length < 6) {
+          loginPasswordError.textContent = "Password must be at least 6 characters";
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert("✅ Login Successful!");
+          loginForm.submit();
+        }
+      });
+
+    });
+  </script>
+</body>
+
+</html>
