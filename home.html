@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora beauty</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="contact-info">
+      <span>📞 8888056345 &nbsp;</span>
+      <span>📩 aurora289@gmail.com </span>
+    </div>
+  </div>
+  <header>
+    <div class="logo">AURORA</div>
+    <nav class="nav-menu">
+      <a href="HOME">HOME</a>
+      <a href="JWELARY">JWELARY</a>
+      <a href="new.html">WHAT'S NEW?</a>
+      <div class="dropdown">
+        <a href="TYPE">TYPE</a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="Rings.html">Rings</a></li>
+            <li><a href="Earrings.html">Earrings</a></li>
+            <li><a href="Neckpleces.html">Neckpieces</a></li>
+            <li><a href="Bracelate.html">Bangles and Bracelets</a></li>
+            <li><a href="Anklets.html">Anklets</a></li>
+            <li><a href="Hairaccessories.html">Hair Accessories</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    </nav>
+    <div class="icon-bar">
+      <div class="search-wrapper">
+        <input type="text" class="search-input" placeholder="Search..." id="searchInput">
+        <i class="fas fa-search" id="searchIcon"></i> <!-- your existing search icon -->
+      </div>
+      <div class="dropdown">
+        <i class="fas fa-user" id="userIcon"></i> <!-- User Icon -->
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="myaccount.html">My Account</a></li>
+            <li><a href="#">Store Credit</a></li>
+            <li><a href="#">My Wish List</a></li>
+            <li><a href="myaccount.html">Login/Signup</a></li>
+            <li><a href="#">My Orders</a></li>
+          </ul>
+        </div>
+      </div>
+      <i class="fas fa-heart"></i>
+      <div class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="notification">0</span>
+      </div>
+    </div>
+
+  </header>
+  <div class="categories">
+    <div class="category">
+      <a href="Earrings.html">
+        <img src="https://everlasting.shop/cdn/shop/files/DSC00071copy.jpg?v=1707460753&width=535" alt="Earrings">
+      </a>
+      <p>EARINGS</p>
+    </div>
+    <div class="category">
+      <a href="Rings.html">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.voDsG5GtgIzGB1LjjTfq1QHaE8?pid=Api&P=0&h=220" alt="Rings">
+        <p>RINGS</p>
+      </a>+
+    </div>
+    <div class="category">
+      <a href="Neckpleces.html">
+        <img src="https://monomousumi.com/wp-content/uploads/pearl_necklace.jpg" alt="Neckpieces">
+        <p>NECKPIECES</p>
+      </a>
+    </div>
+    <div class="category">
+      <a href="Bracelate.html">
+        <img src="https://i.pinimg.com/originals/87/96/01/879601715dea9fb905dd5bb63d317ddc.jpg" alt="Bracelets">
+        <p>BRACELETS</p>
+      </a>
+    </div>
+    <div class="category">
+      <a href="Anklets.html">
+        <img src="https://i.pinimg.com/originals/12/e8/63/12e86381f00110c196de74cdcb1f80e0.jpg" alt="Anklets">
+        <p>ANKLETS</p>
+      </a>
+    </div>
+    <div class="category">
+      <a href="Hairaccessories.html">
+        <img src="https://i.pinimg.com/originals/3d/78/59/3d785924d3dc6d60d29ac9d9b84a2517.jpg" alt="Hair Accessories">
+        <p>HAIR ACCESSORIES</p>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="Box1"></div>
+    <div class="Box2"></div>
+    <div class="Box3"></div>
+    <div class="Box4"></div>
+    <div class="Box5"></div>
+    <div class="Box6"></div>
+    <div class="Box 7"></div>
+  </div>
+
+
+
+</body>
+<script>
+  const cartIcon = document.querySelector('.cart-icon');
+  const notification = document.querySelector('.notification');
+  let count = 0;
+
+  cartIcon.addEventListener('click', () => {
+    count++;
+    notification.textContent = count;
+  });
+
+  const searchIcon = document.getElementById('searchIcon');
+  const searchInput = document.getElementById('searchInput');
+
+  searchIcon.addEventListener('click', () => {
+    searchInput.classList.toggle('active');
+    if (searchInput.classList.contains('active')) {
+      searchInput.focus();
+    }
+  });
+  const userIcon = document.getElementById('userIcon');
+  const dropdownContent = userIcon.nextElementSibling;
+
+  userIcon.addEventListener('click', () => {
+    dropdownContent.classList.toggle('show');
+  });
+
+  // Close dropdown if clicked outside
+  window.addEventListener('click', function (e) {
+    if (!userIcon.contains(e.target) && !dropdownContent.contains(e.target)) {
+      dropdownContent.classList.remove('show');
+    }
+  });
+
+
+</script>
+
+</html>

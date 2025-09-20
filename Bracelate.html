@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bracelate</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    .top-bar {
+      height: 33px;
+      width: 100%;
+      background-color: #ede7e7;
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+    }
+
+    header {
+      position: sticky;
+      top: 33px;
+      z-index: 1000;
+      width: 100%;
+      background-color: white;
+      padding: 10px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-family: poppin;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-menu a,
+    .nav-menu .dropdown > a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 12px;
+      font-size: 16px;
+      padding: 10px 15px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu .dropdown > a:hover {
+      background-color: white;
+      color: #d63384;
+    }
+
+    /* Dropdown */
+    .nav-menu .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .dropdown-content ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h2 {
+      color: #504f4f;
+      margin-top: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .Container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1280px;
+      margin: auto;
+      justify-content: center;
+    }
+
+    .box {
+      width: 294px;
+      text-align: center;
+      box-shadow: 1px 0px 10px black;
+      border-radius: 5px;
+      background: #f9f9f9;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+    }
+
+    .box img {
+      width: 100%;
+      height: 362px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover img {
+      transform: scale(1.05);
+    }
+
+    .box h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .box p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .box button {
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .box button:hover {
+      background-color: #f689b5;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        width: 47%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="contact-info">
+      <span>📞 8888056345 &nbsp;</span>
+      <span>📩 aurora289@gmail.com </span>
+    </div>
+  </div>
+  <header>
+    <div class="logo">AURORA</div>
+
+    <nav class="nav-menu">
+      <a href="HOME">HOME</a>
+      <a href="JWELARY">JWELARY</a>
+      <a href="WHAT'S NEW ?">WHAT'S NEW?</a>
+      <div class="dropdown">
+      <a href="TYPE">TYPE</a>
+      <div class="dropdown-content">
+        <ul>
+          <li><a href="Rings.html">Rings</a></li>
+          <li><a href="Earrings.html">Earrings</a></li>
+          <li><a href="Neckpleces.html">Neckpieces</a></li>
+          <li><a href="Bracelate.html">Bangles and Bracelets</a></li>
+          <li><a href="Anklets.html">Anklets</a></li>
+          <li><a href="Hairaccessories.html">Hair Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+      <a href="COLLECTION">COLLECTION</a>
+    </nav>
+  </header>
+
+  <h2>BRACELETS</h2>
+
+  <div class="Container">
+  <div class="box">
+    <a href="bracelate1.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew97551062-11_1.jpg" alt="Image 1">
+   </a>
+    <h4>Elegant gold floral bracelet with textured links</h4>
+    <p>₹98.00</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate2.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1103680-m3.jpg" alt="Image 2">
+    <h4>Leaf-inspired cuff bracelet in antique finish</h4>
+    </a>
+    <p>₹98.00</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate3.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1106145-t_1_1.jpg" alt="Image 3">
+    </a>
+    <h4>Gold bangle with delicate stone circle charm</h4>
+    <p>₹399.00</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate4.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1104776-m.jpg" alt="Image 4">
+    </a>
+    <h4>Modern linked bracelet with stylish accents</h4>
+    <p>₹799.00</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate5.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1108556-m1.jpg" alt="Image 5">
+    </a>
+    <h4>Ethnic stone-studded bracelet in oxidised tone</h4>
+    <p>₹199</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate6.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1103807-14.jpg" alt="Image 6">
+    </a>
+    <h4>Minimal stone bracelet with dual tone finish</h4>
+    <p>₹279</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate7.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1103770-1.jpg" alt="Image 7">
+   </a>
+    <h4>Gold fan bracelet with intricate detailing</h4>
+    <p>₹310</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate8.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1103549-m1.jpg" alt="Image 8">
+    </a>
+    <h4>Curved bracelet with embedded shimmer stones</h4>
+    <p>₹455</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate9.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1107369-m1_1.jpg" alt="Image 9">
+    </a>
+    <h4>Glossy metal bangle with modern sleek design</h4>
+    <p>₹325</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate10.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1104131-8.jpg" alt="Image 10">
+   </a>
+    <h4>Silver bracelet with dotted texture design</h4>
+    <p>₹270</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate11.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1105829-m.jpg" alt="Image 11">
+   </a>
+    <h4>Antique-style bracelet with heritage motifs</h4>
+    <p>₹420</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate12.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1104206-7.jpg" alt="Image 12">
+    </a>
+    <h4>Oxidised silver kada with boho detailing</h4>
+    <p>₹260</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate13.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1104300-7.jpg" alt="Image 13">
+    </a>
+    <h4>Classic gold-toned bracelet for daily wear</h4>
+    <p>₹370</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate14.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1103553.jpg" alt="Image 14">
+    </a>
+    <h4>Looped design gold bracelet with minimal finish</h4>
+    <p>₹295</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate15.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1104596_1.jpg" alt="Image 15">
+    </a>
+    <h4>Beaded charm bracelet with adjustable chain</h4>
+    <p>₹340</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="box">
+    <a href="bracelate16.html">
+    <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew221237-m2.jpg" alt="Image 16">
+    </a>
+    <h4>Trendy multi-stone bracelet with elegant finish</h4>
+    <p>₹315</p>
+    <button>Buy Now</button>
+  </div>
+</div>
+
+
+</body>
+
+</html>

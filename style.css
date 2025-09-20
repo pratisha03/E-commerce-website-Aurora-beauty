@@ -1,0 +1,251 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top bar */
+.top-bar {
+  height: 33px;
+  width: 100%;
+  background-color: #ede7e7;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+/* Header layout */
+header {
+  position: sticky;
+  top: 33px;
+  /* below .top-bar */
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: poppin;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.icon-bar {
+  display: flex;
+  gap: 30px;
+  font-size: 24px;
+  position: relative;
+  margin: 20px;
+}
+
+.icon-bar i {
+  cursor: pointer;
+  color: #333;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 0;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  margin-right: 5px;
+}
+
+.search-input.active {
+  width: 200px;
+  /* adjust size */
+  opacity: 1;
+  padding: 5px 10px;
+}
+
+#searchIcon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+.notification {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #7b59ff;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  gap: 15px;
+}
+
+.nav-menu a,
+.nav-menu .dropdown>a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.nav-menu a:hover,
+.nav-menu .dropdown>a:hover {
+  background-color: white;
+  color: #d63384;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  /* hidden by default */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  /* align to the user icon */
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content ul li {
+  padding: 10px;
+}
+
+.dropdown-content ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content ul li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover (same as TYPE dropdown) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Categories Section */
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.category {
+  text-align: center;
+}
+
+.category img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.categories a {
+  text-decoration: none;
+}
+
+/* Image Boxes */
+.container {
+  position: relative;
+}
+
+.Box1,
+.Box2,
+.Box3,
+.Box4,
+.Box5 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  text-decoration: none;
+}
+
+.Box1 {
+  height: 500px;
+  background-image: url("https://i.pinimg.com/originals/65/ec/c1/65ecc14516ae571f33e88a40bef3be15.jpg");
+}
+
+.Box2 {
+  height: 590px;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/df383490885971.5e230dd39d725.jpg");
+}
+
+.Box3 {
+  height: 590px;
+  background-image: url("https://wallpaperaccess.com/full/4168952.jpg");
+}
+
+.Box4 {
+  height: 600px;
+  background-image: url("https://www.bernardine.com/wp-content/uploads/2023/03/4ea3444324a0ff17/gold-pendant-necklaces-for-women.png");
+}
+
+.Box5 {
+  height: 650px;
+  background-image: url("https://i.pinimg.com/originals/4f/d8/38/4fd83845d9395263988e5532baf88d14.jpg");
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    .top-bar {
+      height: 33px;
+      width: 100%;
+      background-color: #ede7e7;
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+    }
+
+    header {
+      position: sticky;
+      top: 33px;
+      z-index: 1000;
+      width: 100%;
+      background-color: white;
+      padding: 10px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-family: poppin;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-menu a,
+    .nav-menu .dropdown > a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 12px;
+      font-size: 16px;
+      padding: 10px 15px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu .dropdown > a:hover {
+      background-color: white;
+      color: #d63384;
+    }
+
+    /* Dropdown */
+    .nav-menu .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .dropdown-content ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+
+.breadcrumb {
+  background: #f7f7f7;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.product-container {
+  display: flex;
+  padding: 2rem;
+  gap: 3rem;
+}
+.image-section {
+  overflow: hidden;
+  width: 400px;
+  height: auto;
+}
+.image-section img {
+  width: 100%;
+  transition: transform 0.9s ease;
+}
+.image-section img:hover {
+  transform: scale(1.9); /* Zoom in by 1.5x */
+}
+
+.info-section {
+  max-width: 500px;
+}
+
+.price {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.new-price {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: #e91e63;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.in-stock {
+  color: green;
+}
+
+.details p {
+  margin: 0.5rem 0;
+}
+
+    </style>
+</head>
+<body>
+   <div class="top-bar">
+    <div class="contact-info">
+      <span>📞 8888056345 &nbsp;</span>
+      <span>📩 aurora289@gmail.com </span>
+    </div>
+  </div>
+  <header>
+    <div class="logo">AURORA</div>
+
+    <nav class="nav-menu">
+      <a href="HOME">HOME</a>
+      <a href="JWELARY">JWELARY</a>
+      <a href="WHAT'S NEW ?">WHAT'S NEW?</a>
+      <div class="dropdown">
+      <a href="TYPE">TYPE</a>
+      <div class="dropdown-content">
+        <ul>
+          <li><a href="Rings.html">Rings</a></li>
+          <li><a href="Earrings.html">Earrings</a></li>
+          <li><a href="Neckpleces.html">Neckpieces</a></li>
+          <li><a href="Bracelate.html">Bangles and Bracelets</a></li>
+          <li><a href="Anklets.html">Anklets</a></li>
+          <li><a href="Hairaccessories.html">Hair Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+      <a href="COLLECTION">COLLECTION</a>
+    </nav>
+    </header>
+  <main class="product-container">
+    <div class="image-section">
+      <img src="https://everstylish.com/media/catalog/product/cache/e6e25535aeb764d81e82413ff3614fb7/j/e/jew1102979-1.jpg" alt="Desert Bloom Earrings" />
+    </div>
+
+    <div class="info-section">
+      <h2>Ethnic floral ring with oxidised finish</h2>
+      <p class="price">
+        <span class="old-price">₹149.00</span>
+        <span class="new-price">₹98.00</span>
+      </p>
+
+      <label for="qty">Qty:</label>
+      <select id="qty">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <OPTION>4</OPTION>
+        <OPTION>5</OPTION>
+        <OPTION>6</OPTION>
+        <OPTION>7</OPTION>
+        <OPTION>8</OPTION>
+      </select>
+
+      <button class="add-to-cart">ADD TO BAG</button>
+
+      <div class="details">
+        <p><strong>Availability:</strong> <span class="in-stock">In stock</span></p>
+        <p><strong>SKU:</strong> JEW1108045</p>
+        <p><strong>Dispatch Time:</strong> Between 01-08-2025 To 03-08-2025</p>
+      </div>
+    </div>
+  </main>
+
+</body>
+</body>
+</html>
